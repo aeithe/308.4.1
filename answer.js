@@ -1,6 +1,6 @@
 
 
-/** 
+
 function threeD (NewArr){
     //creates a new function
     let keys = NewArr[0] //sets the key value equal to zero 
@@ -21,4 +21,3 @@ function threeD (NewArr){
 
 }
 console.log(threeD(new_arr));
-*/
