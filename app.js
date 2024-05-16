@@ -96,5 +96,30 @@ const arryManip = [["ID", "Name", "Occupation", "Age"],
 console.log(arryManip.pop());
 
 console.log(arryManip);
+arryManip.push(["7", "Bilbo", "None", "111"])
+console.log(arryManip);
 
-console.log(arryManip.push("7", "Bilbo", "None", "111"));
+
+//part 5 ;;-;;
+
+const objtoCSV = function fiveD (data){
+    const csvRows = [];
+    const headers = Object.keys[data[0]];
+    csvRows.push(headers.join(','));
+    for (const row of data) {
+        const values = headers.map(header => {
+            const val = row[header]
+            return `"${val}"`;
+        });
+        csvRows.push(values.join(','));
+    }
+    return csvRows.join('\n');
+};
+
+const data = [
+  { ID: '42', Name: 'Bruce', Occupation: 'Knight', Age: '41' },
+  { ID: '57', Name: 'Bob', Occupation: 'Fry Cook', Age: '19' },
+  { ID: '63', Name: 'Blaine', Occupation: 'Quiz Master', Age: '58' },
+  { ID: '07', Name: 'Bilbo', Occupation: 'None', Age: '111'},];
+const csvData = objtoCSV(data);
+console.log(csvData);
