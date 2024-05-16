@@ -30,22 +30,24 @@ const new_arr = [["ID", "Name", "Occupation", "Age"],
                    ["57", "Bob", "Fry Cook", "19"], 
                    ["63", "Blaine", "Quiz Master", "58"], 
                    ["98", "Bill", "Doctor’s Assistant", "26"]];
-function threeD (NewArr){
-                    let keys = NewArr[0]
-                    let rArr = []
-                    const obj = {}
-                    for (let i = 1; i <= NewArr.length -1 ; i++){
-                        let arrLen = NewArr[i].length - 1
-                        for(let j = 0; j <=  arrLen ; j++ ){
-                        let key = keys[j]
-                        let value = NewArr[i][j]    
-                        obj[key] = value
-                
-                        }
-                        //console.log(NewArr[i])
-                        rArr.push(obj)
-                    }
-                    return rArr
-                
-                }
-                console.log(threeD(new_arr))
+
+
+function fourD(new_arr_obj) {
+    let keyz = new_arr_obj[0];
+    let rarry = [];
+    const newObj = {};
+    for (let i = 1 ; i <= new_arr_obj.length -1; i ++){
+        let arrLength = new_arr_obj[i].length - 1 
+        for (let j = 0; j <= arrLength; j ++){
+            let key = keyz[j];
+            let values = new_arr_obj[i][j];
+            newObj[key] = values;
+        }
+         rarry.push(newObj);    
+
+    }
+    return rarry;
+}
+
+console.log(fourD(new_arr));
+
